@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+      🧠 PROJECT: Link Library + Media + Embed
+
+      ✅ MODULE TOPICS THIS PROJECT PRACTICES
+      1) Introduction to Semantic HTML
+      2) Understanding Semantic HTML (choosing tags by meaning)
+      3) Anchor Tags & Hyperlinks
+      4) Adding Images, Audio, and Video
+      5) Embedding content with <iframe>
+
+      🎯 PROJECT GOAL
+      Build a semantic link library page that teaches anchor tags AND includes media + an iframe embed.
+
+  
+    -->
+
+    <!-- STEP 1 — Add the basic <meta> tags -->
+    <!--
+      Inside <head>, create these tags EXACTLY:
+      1) <meta charset="UTF-8">
+      2) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      3) <title> ... </title> (use the project name)
+      4) <meta name="description" content="..."> (1 sentence about the page)
+      (Optional) 5) <meta name="author" content="Your Name">
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Library + Media + Embed</title>
+    <meta
+      name="description"
+      content="A semantic link library with embedded media and iframes."
+    />
+    <meta name="author" content="Brandon Goodmon" />
+
+    <!-- STEP 2 — Link the CSS file -->
+    <!--
+      Add this line in <head>:
+      <link rel="stylesheet" href="styles.css">
+      This CSS is just a helper so you can SEE your sections.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- STEP 3 — Create the outer page container -->
+    <!--
+      Add ONE wrapper <div> with class="page".
+      Everything else will go inside this wrapper.
+      Example structure (do NOT copy literally; you must write it):
+      <div class="page"> ... </div>
+    -->
+    <div class="page">
+      <!-- All content goes inside this wrapper -->
+
+      <!-- STEP 4 — Add the main semantic layout tags -->
+      <!--
+      Inside .page, add these tags in this order:
+      1) <header> ... </header>
+      2) <nav> ... </nav>
+      3) <main> ... </main>
+      4) <aside> ... </aside>
+      5) <footer> ... </footer>
+
+      WHY THIS MATTERS:
+      These tags tell the browser and screen readers what each part is.
+    -->
+      <!-- STEP 5 — Header content -->
+      <!--
+      Inside <header>, add:
+      - One <h1> (the main title of the page)
+      - One <p class="small"> (a short subtitle)
+      - OPTIONAL but recommended: a skip link at the very top:
+        <a class="skip" href="#content">Skip to content</a>
+    -->
+      <header>
+        <a class="skip" href="#content">Skip to content</a>
+        <h1>My Link Library</h1>
+        <p class="small">A collection of my favorite resources and media.</p>
+      </header>
+      <!-- STEP 6 — Navigation with internal anchor links -->
+      <!--
+      Inside <nav>, create a list of links using:
+      <ul> and <li> tags.
+
+      You MUST include at least 4 links that jump to sections on the page:
+      - One link to the main content area: href="#content"
+      - One link to your media section: href="#media"
+      - One link to your embed section: href="#embed"
+      - One link to a final section: href="#extras" (or another id you choose)
+
+      IMPORTANT RULE:
+      The href like "#media" ONLY works if a section later has id="media".
+    -->
+      <nav>
+        <ul>
+          <li><a href="#content">Content</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#embed">Embed</a></li>
+          <li><a href="#extras">Extras</a></li>
+        </ul>
+      </nav>
+      <!-- STEP 7 — Main content + section IDs -->
+      <!--
+      Give <main> an id="content" so the "Skip to content" link works.
+      Inside <main>, you will create MULTIPLE <section> blocks.
+      Each section should have:
+      - A heading (<h2>)
+      - Content inside (paragraphs, lists, articles, etc.)
+
+      REQUIRED sections inside <main>:
+      A) <section id="media"> ... </section>
+      B) <section id="embed"> ... </section>
+      C) <section id="extras"> ... </section>
+    -->
+      <main id="content">
+        <!-- STEP 9 — Media section (image + audio + video) -->
+        <!--
+        Inside <section id="media"> add:
+        - One <figure> with <img> + <figcaption>
+        - One <audio controls> with a <source>
+        - One <video controls> with a <source>
+        Use placeholder file paths for audio/video if needed.
+    -->
+        <section id="media">
+          <h2>Media Section</h2>
+          <!-- Media content will go here in STEP 9 -->
+          <figure>
+            <img src="placeholder.jpg" alt="Description of the image" />
+            <figcaption>Image caption</figcaption>
+          </figure>
+          <audio controls>
+            <source src="placeholder.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <video controls>
+            <source src="placeholder.mp4" type="video/mp4" />
+            Your browser does not support the video element.
+          </video>
+        </section>
+        <!-- STEP 10 — Embed section (iframe) -->
+        <!--
+        Inside <section id="embed"> embed something helpful for learning:
+        - YouTube tutorial iframe OR
+        - Google Maps iframe for a fake 'office location'
+        Make sure iframe includes title="...".
+    -->
+        <section id="embed">
+          <h2>Embed Section</h2>
+          <!-- Embed content will go here in STEP 10 -->
+          <iframe
+            width="560"
+            height="720"
+            src="https://www.youtube.com/embed/Bhj4miRkSOc?si=TX75ISIpeko3D-aD"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </section>
+        <!-- STEP 8 — Favorites list + external links -->
+        <!--
+        Inside <section id="extras"> create a 'Favorite Resources' list.
+        Use <ul> and <li>.
+        Add at least 5 links, and for each external link use:
+        target="_blank" and rel="noopener"
+        Make the link text descriptive (example: 'MDN HTML Reference', not 'click here').
+    -->
+        <section id="extras">
+          <h3>Favorite Resources</h3>
+          <!-- Extras content will go here in STEP 8 -->
+          <ul>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                rel="noopener"
+                >MDN HTML Reference</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                rel="noopener"
+                >MDN CSS Reference</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                rel="noopener"
+                >MDN JavaScript Reference</a
+              >
+            </li>
+            <li>
+              <a href="https://css-tricks.com/" target="_blank" rel="noopener"
+                >CSS Tricks</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+                target="_blank"
+                rel="noopener"
+                >Web Accessibility</a
+              >
+            </li>
+          </ul>
+        </section>
+        <!-- STEP 11 — Create 2–3 resource cards using <article> -->
+        <!--
+      Still inside <main>, create 2–3 <article class="card"> blocks.
+      Each article should include:
+      - <h3> title
+      - <p> description
+      - One link (<a>) that points to a resource
+    -->
+        <article class="card">
+          <h3>HTML Basics</h3>
+          <p>A beginner-friendly guide to HTML fundamentals.</p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+            target="_blank"
+            rel="noopener"
+            >Read the guide</a
+          >
+        </article>
+        <article class="card">
+          <h3>CSS Fundamentals</h3>
+          <p>An introduction to CSS for styling web pages.</p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics"
+            target="_blank"
+            rel="noopener"
+            >Read the guide</a
+          >
+        </article>
+        <article class="card">
+          <h3>JavaScript Guide</h3>
+          <p>A comprehensive resource for learning JavaScript.</p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            target="_blank"
+            rel="noopener"
+            >Read the guide</a
+          >
+        </article>
+      </main>
+      <!-- STEP 12 — Aside + footer -->
+      <!--
+      Aside: add a short 'Link Best Practices' checklist in a <ul>.
+      Footer: add a short note explaining why descriptive links help accessibility.
+    -->
+      <aside>
+        <h2>Link Best Practices</h2>
+        <ul>
+          <li>Use descriptive link text (not "click here")</li>
+          <li>Use target="_blank" for external links</li>
+          <li>Use rel="noopener" for security on external links</li>
+          <li>Ensure internal links point to existing ids</li>
+          <li>Test links to make sure they work correctly</li>
+        </ul>
+      </aside>
+      <footer>
+        <p>
+          Descriptive links improve accessibility by providing context to screen
+          readers and users who rely on assistive technologies. They help users
+          understand where the link will take them, making navigation easier and
+          more intuitive.
+        </p>
+      </footer>
+    </div>
+
+    <!-- STEP LAST — Checklist before you finish -->
+    <!--
+      ✅ Semantic tags used: header/nav/main/section/article/aside/footer
+      ✅ Nav links jump correctly (ids exist)
+      ✅ Image uses alt text + (preferably) figure/figcaption
+      ✅ Audio uses controls + has a <source>
+      ✅ Video uses controls + has a <source>
+      ✅ iframe is embedded (YouTube or Maps) + has a title attribute
+      ✅ Link text is descriptive (not 'click here')
+    -->
+  </body>
+</html>
