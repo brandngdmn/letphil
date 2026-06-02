@@ -1,0 +1,151 @@
+/*
+  🧠 PROJECT: Profile Card — Basic Selectors
+
+  IMPORTANT:
+  - After each step, save and refresh the browser.
+*/
+
+/* STEP 1 — Universal selector */
+/*
+  Use the universal selector (*) to reset margin and padding.
+  Set box-sizing to border-box.
+*/
+
+:root {
+  --primary-color: #032da1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STEP 2 — Element selectors */
+/*
+  Style the body element with a font-family and background color.
+  Style the h1 element to change text color.
+*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STEP 3 — Class selectors */
+/*
+  Select .card to add padding, border, and width.
+  Select .role to make the text italic.
+  Select .bio to make the text bold.
+*/
+
+.card {
+  margin-top: 10%;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .image {
+  background-image: url(images/card-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .image > img {
+  border-radius: 100%;
+  margin-top: 34%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .image > h3 {
+  padding-top: 10px;
+}
+
+.card .image > p {
+  padding-top: 5px;
+  font-size: 14px;
+  color: darkgrey;
+}
+
+.card .engaged {
+  padding: 20px;
+}
+
+.card .engaged ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .engaged ul > li {
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .engaged ul > li h2 {
+  color: var(--primary-color);
+}
+
+.card .engaged ul > li p {
+  font-size: 14px;
+  color: darkgrey;
+}
+.role {
+  font-style: italic;
+}
+
+.bio {
+  font-weight: 600;
+}
+
+/* STEP 4 — ID selector */
+/*
+  Select #name to increase font size.
+  IDs should be unique.
+*/
+
+.card .follow-btn {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card .follow-btn > button {
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  color: ghostwhite;
+  cursor: pointer;
+}
+
+.card .description {
+  padding-left: 0 20px 20px 25px;
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 7px;
+}
+
+.card .description > h4 {
+  padding-bottom: 5px;
+}
+
+.card .description > p {
+  font-size: 14px;
+}
